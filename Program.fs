@@ -1,2 +1,11 @@
-﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+﻿open Revenue
+open ReadData
+
+[<EntryPoint>]
+let main argv =
+    loadCSVFile ()
+    |> Option.map barData
+    |> Option.map createBar
+    |> ignore
+
+    0
