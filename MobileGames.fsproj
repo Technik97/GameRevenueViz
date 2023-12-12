@@ -6,7 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="ReadData.fs" />
+    <Compile Include="Revenue.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Data" Version="6.3.0" />
+    <PackageReference Include="XPlot.Plotly" Version="4.0.6" />
   </ItemGroup>
 
 </Project>
