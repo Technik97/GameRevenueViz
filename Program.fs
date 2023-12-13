@@ -2,16 +2,15 @@
 open Revenue
 open Games
 
-[<EntryPoint>]
-let main argv =
-    loadCSVFile ()
-    |> Option.map barData
-    |> Option.map createBar
+let showCharts data createChart =      
+    loadCSVFile ()      
+    |> Option.map data     
+    |> Option.map createChart     
     |> ignore
 
-    loadCSVFile ()
-    |> Option.map pieData
-    |> Option.map createPie
-    |> ignore
+[<EntryPoint>]
+let main argv =
+    showCharts barData createBar
+    showCharts pieData createPie
 
     0
