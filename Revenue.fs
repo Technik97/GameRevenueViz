@@ -7,9 +7,9 @@ open ReadData
 
 let barData (rawCSV: RawCSV) = 
     // Selecting top 20 games
-    let games = rawCSV.Rows
-                                            |> Seq.toList
-                                            |> List.take 20
+    let games= rawCSV.Rows
+            |> Seq.toList
+            |> List.take 20
 
     Bar(
         x = [for game in games -> game.Game],
